@@ -1,0 +1,48 @@
+import 'package:flutter/material.dart';
+import 'package:t_store/utils/theme/custom_themes/appbar_theme.dart';
+import 'package:t_store/utils/theme/custom_themes/bottom_sheet_theme.dart';
+import 'package:t_store/utils/theme/custom_themes/checkbox_theme.dart';
+import 'package:t_store/utils/theme/custom_themes/chip_theme.dart';
+import 'package:t_store/utils/theme/custom_themes/elevated_button_theme.dart';
+import 'package:t_store/utils/theme/custom_themes/outlined_button_theme.dart';
+import 'package:t_store/utils/theme/custom_themes/text_field_theme.dart';
+import 'package:t_store/utils/theme/custom_themes/text_theme.dart';
+
+class TAppTheme {
+  // as this theme constructor not going to use again and again _() private sign
+  TAppTheme._();
+
+  // as constructor is private we need to create static function
+  static ThemeData lightTheme = ThemeData(
+    useMaterial3: true,
+    fontFamily: 'Poppins',
+    // theme will understand this constructor going to be light one or dark one
+    brightness: Brightness.light,
+    primaryColor: Colors.blue,
+    textTheme: TTextTheme.lightTextTheme,
+    chipTheme: TChipTheme.lightChipThemeData,
+    scaffoldBackgroundColor: Colors.white,
+    appBarTheme: TAppBarTheme.lightAppBarTheme,
+    checkboxTheme: TCheckboxTheme.lightCheckboxThemeData,
+    bottomSheetTheme: TBottomSheetTheme.lightBottomSheetTheme,
+    elevatedButtonTheme: TElevatedButtonTheme.lightElevatedButtonTheme,
+    outlinedButtonTheme: TOutlinedButtonTheme.lightOutlinedButtonTheme,
+    inputDecorationTheme: TTextFieldTheme.lightInputDecorationTheme,
+  );
+
+  static ThemeData darkTheme = ThemeData(
+    useMaterial3: true,
+    fontFamily: 'Poppins',
+    brightness: Brightness.dark,
+    primaryColor: Colors.blue,
+    textTheme: TTextTheme.darkTextTheme,
+    chipTheme: TChipTheme.darkChipThemeData,
+    scaffoldBackgroundColor: Colors.black,
+    appBarTheme: TAppBarTheme.darkAppBarTheme,
+    checkboxTheme: TCheckboxTheme.darkCheckboxThemeData,
+    bottomSheetTheme: TBottomSheetTheme.darkBottomSheetTheme,
+    elevatedButtonTheme: TElevatedButtonTheme.darkElevatedButtonTheme,
+    outlinedButtonTheme: TOutlinedButtonTheme.darkOutlinedButtonTheme,
+    inputDecorationTheme: TTextFieldTheme.darkInputDecorationTheme,
+  );
+}
