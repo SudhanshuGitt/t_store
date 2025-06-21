@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
+import 'package:t_store/features/authentication/screens/login/login.dart';
 
 // as we are using get state management
 class OnboardingController extends GetxController {
@@ -25,7 +26,7 @@ class OnboardingController extends GetxController {
   // Update Current Index & jump to next page
   void nextPage() {
     if (currentPageIndex.value == 2) {
-      // Get.to(LoginScreen());
+      Get.to(LoginScreen());
     } else {
       int page = currentPageIndex.value + 1;
       pageController.jumpToPage(page);
@@ -34,7 +35,6 @@ class OnboardingController extends GetxController {
 
   // update current index & jump to last page
   void skipPage() {
-    currentPageIndex.value = 2;
-    pageController.jumpToPage(2);
+    Get.to(LoginScreen());
   }
 }
