@@ -14,6 +14,7 @@ class SignUpScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(),
       body: SingleChildScrollView(
+        // Padding to give default equal space on all sides in all screen
         child: Padding(
           padding: const EdgeInsets.all(TSizes.defaultSpace),
           child: Column(
