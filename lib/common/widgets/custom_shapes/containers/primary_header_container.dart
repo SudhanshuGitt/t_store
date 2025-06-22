@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:t_store/common/widgets/custom_shapes/containers/circular_container.dart';
+import 'package:t_store/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:t_store/common/widgets/custom_shapes/curverd_edges/curved_edges_widget.dart';
 import 'package:t_store/utils/constants/colors.dart';
 
@@ -25,14 +25,20 @@ class PrimaryHeaderContainer extends StatelessWidget {
               Positioned(
                 top: -150,
                 right: -250,
-                child: CircularContainer(
+                child: TRoundedContainer(
+                  width: 400,
+                  height: 400,
+                  radius: 400,
                   backgroundColor: TColors.white.withValues(alpha: 0.1),
                 ),
               ),
               Positioned(
                 top: 100,
                 right: -300,
-                child: CircularContainer(
+                child: TRoundedContainer(
+                  width: 400,
+                  height: 400,
+                  radius: 400,
                   backgroundColor: TColors.white.withValues(alpha: 0.1),
                 ),
               ),
