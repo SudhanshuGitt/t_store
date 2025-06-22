@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
+import 'package:t_store/features/shop/screens/home/home.dart';
+import 'package:t_store/utils/constants/colors.dart';
+import 'package:t_store/utils/helpers/helper_functions.dart';
 
 class NavigationMenu extends StatelessWidget {
   const NavigationMenu({super.key});
@@ -8,6 +11,7 @@ class NavigationMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(NavigationController());
+    final isDarkMode = THelperFunctions.isDarkMode(context);
 
     return Scaffold(
       // there must ne obs inside of obx and whenever that obs changes
@@ -20,6 +24,11 @@ class NavigationMenu extends StatelessWidget {
           selectedIndex: controller.selectedIndex.value,
           onDestinationSelected: (index) =>
               controller.selectedIndex.value = index,
+
+          backgroundColor: isDarkMode ? TColors.black : TColors.white,
+          indicatorColor: isDarkMode
+              ? TColors.white.withValues(alpha: 0.1)
+              : TColors.black.withValues(alpha: 0.1),
           destinations: [
             NavigationDestination(
               icon: Icon(Iconsax.home_1_copy),
