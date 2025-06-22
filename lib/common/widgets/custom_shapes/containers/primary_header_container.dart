@@ -36,6 +36,7 @@ class PrimaryHeaderContainer extends StatelessWidget {
                   backgroundColor: TColors.white.withValues(alpha: 0.1),
                 ),
               ),
+              child,
             ],
           ),
         ),
