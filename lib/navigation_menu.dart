@@ -60,7 +60,7 @@ class NavigationController extends GetxController {
   final Rx<int> selectedIndex = 0.obs;
 
   final screens = [
-    Container(color: Colors.green),
+    const HomeScreen(),
     Container(color: Colors.orange),
     Container(color: Colors.pink),
     Container(color: Colors.blue),
