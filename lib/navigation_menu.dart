@@ -1,0 +1,59 @@
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:iconsax_flutter/iconsax_flutter.dart';
+
+class NavigationMenu extends StatelessWidget {
+  const NavigationMenu({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final controller = Get.put(NavigationController());
+
+    return Scaffold(
+      // there must ne obs inside of obx and whenever that obs changes
+      // Obx is observer and obs is observer variable
+      // whenever the obs change it will redraw the state for us
+      bottomNavigationBar: Obx(
+        () => NavigationBar(
+          height: 80,
+          elevation: 0,
+          selectedIndex: controller.selectedIndex.value,
+          onDestinationSelected: (index) =>
+              controller.selectedIndex.value = index,
+          destinations: [
+            NavigationDestination(
+              icon: Icon(Iconsax.home_1_copy),
+              label: 'Home',
+            ),
+            NavigationDestination(icon: Icon(Iconsax.shop_copy), label: 'Shop'),
+            NavigationDestination(
+              icon: Icon(Iconsax.heart_copy),
+              label: 'Wishlist',
+            ),
+            NavigationDestination(
+              icon: Icon(Iconsax.user_copy),
+              label: 'Profile',
+            ),
+          ],
+        ),
+      ),
+      body: Obx(() => controller.screens[controller.selectedIndex.value]),
+    );
+  }
+}
+
+// use this to avoid stateful widget
+class NavigationController extends GetxController {
+  // observer variable which will be observed by the widget
+  // setstate will re draw everything on the screen
+  // getx will improve the speed of our application
+  // it will only redraw what is inside obs
+  final Rx<int> selectedIndex = 0.obs;
+
+  final screens = [
+    Container(color: Colors.green),
+    Container(color: Colors.orange),
+    Container(color: Colors.pink),
+    Container(color: Colors.blue),
+  ];
+}
