@@ -3,14 +3,14 @@ import 'package:t_store/common/widgets/custom_shapes/containers/rounded_containe
 import 'package:t_store/common/widgets/custom_shapes/curverd_edges/curved_edges_widget.dart';
 import 'package:t_store/utils/constants/colors.dart';
 
-class PrimaryHeaderContainer extends StatelessWidget {
-  const PrimaryHeaderContainer({super.key, required this.child});
+class TPrimaryHeaderContainer extends StatelessWidget {
+  const TPrimaryHeaderContainer({super.key, required this.child});
 
   final Widget child;
 
   @override
   Widget build(BuildContext context) {
-    return CurvedEdgeWidget(
+    return TCurvedEdgeWidget(
       child: Container(
         color: TColors.primary,
         // we dont want any padding

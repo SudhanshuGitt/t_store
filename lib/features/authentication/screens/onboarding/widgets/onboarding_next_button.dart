@@ -6,8 +6,8 @@ import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/device/device_utility.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
 
-class OnBoardingNextButton extends StatelessWidget {
-  const OnBoardingNextButton({super.key});
+class TOnBoardingNextButton extends StatelessWidget {
+  const TOnBoardingNextButton({super.key});
 
   @override
   Widget build(BuildContext context) {

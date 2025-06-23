@@ -21,11 +21,11 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           children: [
             // to curve these bottom edges
-            const PrimaryHeaderContainer(
+            const TPrimaryHeaderContainer(
               child: Column(
                 children: [
                   /// App Bar
-                  HomeAppBar(),
+                  THomeAppBar(),
                   SizedBox(height: TSizes.spaceBtwSections),
 
                   /// Search Bar

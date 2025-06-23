@@ -20,17 +20,17 @@ class LoginScreen extends StatelessWidget {
           child: Column(
             children: [
               /// logo title and subtitle
-              LoginHeader(),
+              TLoginHeader(),
 
               /// Form
-              LoginForm(),
+              TLoginForm(),
 
               /// Divider
-              FormDivider(dividerText: TTexts.orSignInWith.capitalize!),
+              TFormDivider(dividerText: TTexts.orSignInWith.capitalize!),
               const SizedBox(height: TSizes.spaceBtwSections),
 
               /// Footer
-              SocialButtons(),
+              TSocialButtons(),
             ],
           ),
         ),

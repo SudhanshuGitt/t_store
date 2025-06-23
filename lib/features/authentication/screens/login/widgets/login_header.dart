@@ -4,8 +4,8 @@ import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/constants/text_strings.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
 
-class LoginHeader extends StatelessWidget {
-  const LoginHeader({super.key});
+class TLoginHeader extends StatelessWidget {
+  const TLoginHeader({super.key});
 
   @override
   Widget build(BuildContext context) {

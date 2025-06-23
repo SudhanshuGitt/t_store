@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class CustomCurveEdges extends CustomClipper<Path> {
+class TCustomCurveEdges extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
     // path is going to define the shape

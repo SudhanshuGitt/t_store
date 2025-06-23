@@ -8,8 +8,8 @@ import 'package:t_store/navigation_menu.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/constants/text_strings.dart';
 
-class LoginForm extends StatelessWidget {
-  const LoginForm({super.key});
+class TLoginForm extends StatelessWidget {
+  const TLoginForm({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -7,8 +7,8 @@ import 'package:t_store/features/authentication/screens/signup/widgets/terms_con
 import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/constants/text_strings.dart';
 
-class SignUpForm extends StatelessWidget {
-  const SignUpForm({super.key});
+class TSignUpForm extends StatelessWidget {
+  const TSignUpForm({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -82,7 +82,7 @@ class SignUpForm extends StatelessWidget {
           const SizedBox(height: TSizes.spaceBtwSections),
 
           /// Terms&Conditions Checkbox
-          TermsAndConditionsCheckbox(),
+          TTermsAndConditionsCheckbox(),
           const SizedBox(height: TSizes.spaceBtwSections),
 
           /// Sign Up Button

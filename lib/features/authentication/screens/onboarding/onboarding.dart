@@ -29,17 +29,17 @@ class OnboardingScreen extends StatelessWidget {
             // it will automatically detect and pass the index
             onPageChanged: controller.updatePageIndicator,
             children: const [
-              OnBoardingPage(
+              TOnBoardingPage(
                 image: TImages.onBoardingImage1,
                 title: TTexts.onBoardingTitle1,
                 subTitle: TTexts.onBoardingSubTitle1,
               ),
-              OnBoardingPage(
+              TOnBoardingPage(
                 image: TImages.onBoardingImage2,
                 title: TTexts.onBoardingTitle2,
                 subTitle: TTexts.onBoardingSubTitle2,
               ),
-              OnBoardingPage(
+              TOnBoardingPage(
                 image: TImages.onBoardingImage3,
                 title: TTexts.onBoardingTitle3,
                 subTitle: TTexts.onBoardingSubTitle3,
@@ -48,13 +48,13 @@ class OnboardingScreen extends StatelessWidget {
           ),
 
           // Skip Button
-          const OnBoardingSkip(),
+          const TOnBoardingSkip(),
 
           // Smooth Page Indicator
-          const OnBoardingDotNavigation(),
+          const TOnBoardingDotNavigation(),
 
           // Circular Button
-          OnBoardingNextButton(),
+          const TOnBoardingNextButton(),
         ],
       ),
     );

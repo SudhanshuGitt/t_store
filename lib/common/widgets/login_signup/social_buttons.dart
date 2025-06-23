@@ -3,8 +3,8 @@ import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/image_strings.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 
-class SocialButtons extends StatelessWidget {
-  const SocialButtons({super.key});
+class TSocialButtons extends StatelessWidget {
+  const TSocialButtons({super.key});
 
   @override
   Widget build(BuildContext context) {

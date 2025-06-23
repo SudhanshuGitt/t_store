@@ -4,8 +4,8 @@ import 'package:t_store/common/widgets/products/cart/cart_menu_icon.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/text_strings.dart';
 
-class HomeAppBar extends StatelessWidget {
-  const HomeAppBar({super.key});
+class THomeAppBar extends StatelessWidget {
+  const THomeAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {

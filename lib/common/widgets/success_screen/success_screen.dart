@@ -4,8 +4,8 @@ import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/constants/text_strings.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
 
-class SuccessScreen extends StatelessWidget {
-  const SuccessScreen({
+class TSuccessScreen extends StatelessWidget {
+  const TSuccessScreen({
     super.key,
     required this.image,
     required this.title,

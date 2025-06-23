@@ -3,8 +3,8 @@ import 'package:t_store/features/authentication/controllers/onboarding/onboardin
 import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/device/device_utility.dart';
 
-class OnBoardingSkip extends StatelessWidget {
-  const OnBoardingSkip({super.key});
+class TOnBoardingSkip extends StatelessWidget {
+  const TOnBoardingSkip({super.key});
 
   @override
   Widget build(BuildContext context) {

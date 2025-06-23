@@ -4,8 +4,8 @@ import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/constants/text_strings.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
 
-class TermsAndConditionsCheckbox extends StatelessWidget {
-  const TermsAndConditionsCheckbox({super.key});
+class TTermsAndConditionsCheckbox extends StatelessWidget {
+  const TTermsAndConditionsCheckbox({super.key});
 
   @override
   Widget build(BuildContext context) {
