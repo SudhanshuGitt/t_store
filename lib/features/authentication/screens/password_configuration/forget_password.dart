@@ -35,7 +35,7 @@ class ForgetPassword extends StatelessWidget {
               TextFormField(
                 decoration: InputDecoration(
                   labelText: TTexts.email,
-                  prefixIcon: Icon(Iconsax.direct_right),
+                  prefixIcon: Icon(Iconsax.direct_right_copy),
                 ),
               ),
               const SizedBox(height: TSizes.spaceBtwSections),

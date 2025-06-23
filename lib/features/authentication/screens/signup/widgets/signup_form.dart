@@ -21,7 +21,7 @@ class TSignUpForm extends StatelessWidget {
                 child: TextFormField(
                   expands: false,
                   decoration: InputDecoration(
-                    prefixIcon: Icon(Iconsax.user),
+                    prefixIcon: Icon(Iconsax.user_copy),
                     labelText: TTexts.firstName,
                   ),
                 ),
@@ -31,7 +31,7 @@ class TSignUpForm extends StatelessWidget {
                 child: TextFormField(
                   expands: false,
                   decoration: InputDecoration(
-                    prefixIcon: Icon(Iconsax.user),
+                    prefixIcon: Icon(Iconsax.user_copy),
                     labelText: TTexts.lastName,
                   ),
                 ),
@@ -44,7 +44,7 @@ class TSignUpForm extends StatelessWidget {
           TextFormField(
             expands: false,
             decoration: InputDecoration(
-              prefixIcon: Icon(Iconsax.user_edit),
+              prefixIcon: Icon(Iconsax.user_edit_copy),
               labelText: TTexts.username,
             ),
           ),
@@ -54,7 +54,7 @@ class TSignUpForm extends StatelessWidget {
           TextFormField(
             expands: false,
             decoration: InputDecoration(
-              prefixIcon: Icon(Iconsax.direct),
+              prefixIcon: Icon(Iconsax.direct_copy),
               labelText: TTexts.email,
             ),
           ),
@@ -64,7 +64,7 @@ class TSignUpForm extends StatelessWidget {
           TextFormField(
             expands: false,
             decoration: InputDecoration(
-              prefixIcon: Icon(Iconsax.call),
+              prefixIcon: Icon(Iconsax.call_copy),
               labelText: TTexts.phoneNo,
             ),
           ),
@@ -74,8 +74,8 @@ class TSignUpForm extends StatelessWidget {
           TextFormField(
             expands: false,
             decoration: InputDecoration(
-              prefixIcon: Icon(Iconsax.password_check),
-              suffixIcon: Icon(Iconsax.eye_slash),
+              prefixIcon: Icon(Iconsax.password_check_copy),
+              suffixIcon: Icon(Iconsax.eye_slash_copy),
               labelText: TTexts.password,
             ),
           ),

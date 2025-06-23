@@ -21,7 +21,7 @@ class TLoginForm extends StatelessWidget {
             /// Email
             TextFormField(
               decoration: InputDecoration(
-                prefixIcon: Icon(Iconsax.direct_right),
+                prefixIcon: Icon(Iconsax.direct_right_copy),
                 labelText: TTexts.email,
               ),
             ),
@@ -30,9 +30,9 @@ class TLoginForm extends StatelessWidget {
             /// Password
             TextFormField(
               decoration: InputDecoration(
-                prefixIcon: Icon(Iconsax.password_check),
+                prefixIcon: Icon(Iconsax.password_check_copy),
                 labelText: TTexts.password,
-                suffixIcon: Icon(Iconsax.eye_slash),
+                suffixIcon: Icon(Iconsax.eye_slash_copy),
               ),
             ),
             const SizedBox(height: TSizes.spaceBtwInputFields / 2),
