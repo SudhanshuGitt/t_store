@@ -105,37 +105,42 @@ class TProductCardVertical extends StatelessWidget {
                       ),
                     ],
                   ),
-                  // it will utilize the space available and keep bottom text at bottom
-                  // Spacer(),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      /// Prices
-                      const TProductPriceText(price: '35.0'),
-
-                      /// Add to cart buttons
-                      Container(
-                        decoration: const BoxDecoration(
-                          color: TColors.dark,
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(TSizes.cardRadiusMd),
-                            bottomRight: Radius.circular(
-                              TSizes.productImageRadius,
-                            ),
-                          ),
-                        ),
-                        child: const SizedBox(
-                          width: TSizes.iconLg * 1.2,
-                          height: TSizes.iconLg * 1.2,
-                          child: Center(
-                            child: Icon(Iconsax.add_copy, color: TColors.white),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
                 ],
               ),
+            ),
+
+            // it will utilize the space available and keep bottom text at bottom
+            // to keep height of each Box same in case of 1 and 2 lines of Heading
+            const Spacer(),
+
+            ///Price Row
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                /// Prices
+                Padding(
+                  padding: const EdgeInsets.only(left: TSizes.sm),
+                  child: const TProductPriceText(price: '35.0'),
+                ),
+
+                /// Add to cart buttons
+                Container(
+                  decoration: const BoxDecoration(
+                    color: TColors.dark,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(TSizes.cardRadiusMd),
+                      bottomRight: Radius.circular(TSizes.productImageRadius),
+                    ),
+                  ),
+                  child: const SizedBox(
+                    width: TSizes.iconLg * 1.2,
+                    height: TSizes.iconLg * 1.2,
+                    child: Center(
+                      child: Icon(Iconsax.add_copy, color: TColors.white),
+                    ),
+                  ),
+                ),
+              ],
             ),
           ],
         ),
