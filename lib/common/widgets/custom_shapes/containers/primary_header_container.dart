@@ -15,36 +15,32 @@ class TPrimaryHeaderContainer extends StatelessWidget {
         color: TColors.primary,
         // we dont want any padding
         padding: const EdgeInsets.all(0),
-        // we can give height so that there is something to show on screen
-        // to prevent error size.infinite
-        child: SizedBox(
-          height: 400,
-          // for creating custom shapes we are going to use stack widget
-          child: Stack(
-            children: [
-              Positioned(
-                top: -150,
-                right: -250,
-                child: TRoundedContainer(
-                  width: 400,
-                  height: 400,
-                  radius: 400,
-                  backgroundColor: TColors.white.withValues(alpha: 0.1),
-                ),
+        // for creating custom shapes we are going to use stack widget
+        child: Stack(
+          children: [
+            /// Background custom shapes
+            Positioned(
+              top: -150,
+              right: -250,
+              child: TRoundedContainer(
+                width: 400,
+                height: 400,
+                radius: 400,
+                backgroundColor: TColors.white.withValues(alpha: 0.1),
               ),
-              Positioned(
-                top: 100,
-                right: -300,
-                child: TRoundedContainer(
-                  width: 400,
-                  height: 400,
-                  radius: 400,
-                  backgroundColor: TColors.white.withValues(alpha: 0.1),
-                ),
+            ),
+            Positioned(
+              top: 100,
+              right: -300,
+              child: TRoundedContainer(
+                width: 400,
+                height: 400,
+                radius: 400,
+                backgroundColor: TColors.white.withValues(alpha: 0.1),
               ),
-              child,
-            ],
-          ),
+            ),
+            child,
+          ],
         ),
       ),
     );

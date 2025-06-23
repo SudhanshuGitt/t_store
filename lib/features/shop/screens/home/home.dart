@@ -49,6 +49,7 @@ class HomeScreen extends StatelessWidget {
                         // Horizontal Scrollable Categories
                         // vertical height is not fixed in list view as
                         THomeCategories(),
+                        SizedBox(height: TSizes.spaceBtwSections),
                       ],
                     ),
                   ),
