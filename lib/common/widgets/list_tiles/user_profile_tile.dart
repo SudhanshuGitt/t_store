@@ -5,7 +5,9 @@ import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/image_strings.dart';
 
 class TUserProfileTile extends StatelessWidget {
-  const TUserProfileTile({super.key});
+  const TUserProfileTile({super.key, required this.onPressed});
+
+  final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -33,6 +35,7 @@ class TUserProfileTile extends StatelessWidget {
         onPressed: () {},
         icon: const Icon(Iconsax.edit_copy, color: TColors.white),
       ),
+      onTap: onPressed,
     );
   }
 }
