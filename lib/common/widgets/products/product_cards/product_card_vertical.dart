@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 import 'package:t_store/common/styles/shadows.dart';
 import 'package:t_store/common/widgets/custom_shapes/containers/rounded_container.dart';
@@ -7,6 +8,7 @@ import 'package:t_store/common/widgets/images/t_rounded_images.dart';
 import 'package:t_store/common/widgets/texts/product_price_text.dart';
 import 'package:t_store/common/widgets/texts/product_title_text.dart';
 import 'package:t_store/common/widgets/texts/t_brand_title_text_vertical_icon.dart';
+import 'package:t_store/features/shop/screens/product_details/product_detail.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/image_strings.dart';
 import 'package:t_store/utils/constants/sizes.dart';
@@ -21,7 +23,7 @@ class TProductCardVertical extends StatelessWidget {
 
     /// container with padding, color, edges, radius and shadow
     return GestureDetector(
-      onTap: () {},
+      onTap: () => Get.to(() => const ProductDetailScreen()),
       child: Container(
         width: 180,
         // we are only going to add single line of padding
