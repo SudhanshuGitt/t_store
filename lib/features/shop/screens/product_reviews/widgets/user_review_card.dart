@@ -47,12 +47,12 @@ class TUserReviewCard extends StatelessWidget {
           trimMode: TrimMode.Line,
           trimExpandedText: ' show less ',
           trimCollapsedText: ' show more ',
-          moreStyle: const TextStyle(
+          moreStyle: TextStyle(
             fontSize: 14,
             fontWeight: FontWeight.bold,
             color: TColors.primary,
           ),
-          lessStyle: const TextStyle(
+          lessStyle: TextStyle(
             fontSize: 14,
             fontWeight: FontWeight.bold,
             color: TColors.primary,
@@ -87,12 +87,12 @@ class TUserReviewCard extends StatelessWidget {
                   trimMode: TrimMode.Line,
                   trimExpandedText: ' show less ',
                   trimCollapsedText: ' show more ',
-                  moreStyle: const TextStyle(
+                  moreStyle: TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.bold,
                     color: TColors.primary,
                   ),
-                  lessStyle: const TextStyle(
+                  lessStyle: TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.bold,
                     color: TColors.primary,

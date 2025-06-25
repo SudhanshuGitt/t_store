@@ -57,8 +57,8 @@ class NavigationMenu extends StatelessWidget {
 // use this to avoid stateful widget
 class NavigationController extends GetxController {
   // observer variable which will be observed by the widget
-  // setstate will re draw everything on the screen
-  // getx will improve the speed of our application
+  // setState will re draw everything on the screen
+  // getX will improve the speed of our application
   // it will only redraw what is inside obs
   final Rx<int> selectedIndex = 0.obs;
 
