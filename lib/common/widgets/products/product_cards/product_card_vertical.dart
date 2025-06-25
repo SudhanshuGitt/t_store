@@ -25,6 +25,7 @@ class TProductCardVertical extends StatelessWidget {
     return GestureDetector(
       onTap: () => Get.to(() => const ProductDetailScreen()),
       child: Container(
+        // we didn't put height as it is defined in grid layout
         width: 180,
         // we are only going to add single line of padding
         padding: EdgeInsets.all(1),
@@ -103,6 +104,9 @@ class TProductCardVertical extends StatelessWidget {
 
             // it will utilize the space available and keep bottom text at bottom
             // to keep height of each Box same in case of 1 and 2 lines of Heading
+            // we need to specify height if we are going to use spacer in our case
+            //  it is defined in grid layout
+            // it wil push the above and below widget to upper and lower edge respectively
             const Spacer(),
 
             ///Price Row
