@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_navigation/src/extension_navigation.dart';
+import 'package:get/get.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
-import 'package:t_store/features/authentication/screens/password_configuration/reset_password.dart';
+import 'package:t_store/features/authentication/controllers/forget_password/forget_password_controller.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/constants/text_strings.dart';
+import 'package:t_store/utils/validators/validation.dart';
 
-class ForgetPassword extends StatelessWidget {
-  const ForgetPassword({super.key});
+class ForgetPasswordScreen extends StatelessWidget {
+  const ForgetPasswordScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(ForgetPasswordController());
     return Scaffold(
       appBar: AppBar(),
       body: SingleChildScrollView(
@@ -32,10 +33,15 @@ class ForgetPassword extends StatelessWidget {
               const SizedBox(height: TSizes.spaceBtwSections * 2),
 
               /// Text Field
-              TextFormField(
-                decoration: InputDecoration(
-                  labelText: TTexts.email,
-                  prefixIcon: Icon(Iconsax.direct_right_copy),
+              Form(
+                key: controller.forgetPasswordFormKey,
+                child: TextFormField(
+                  controller: controller.email,
+                  validator: (value) => TValidator.validateEmail(value),
+                  decoration: InputDecoration(
+                    labelText: TTexts.email,
+                    prefixIcon: Icon(Iconsax.direct_right_copy),
+                  ),
                 ),
               ),
               const SizedBox(height: TSizes.spaceBtwSections),
@@ -46,7 +52,7 @@ class ForgetPassword extends StatelessWidget {
                 child: ElevatedButton(
                   //  Get.off now the user will move to reset screen but when press back button it will move to login
                   // scree
-                  onPressed: () => Get.off(() => const ResetPassword()),
+                  onPressed: () => controller.sendPasswordResetEmail(),
                   child: Text(TTexts.submit),
                 ),
               ),
