@@ -1,12 +1,13 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:t_store/utils/formatters/formatter.dart';
 
 class UserModel {
   UserModel({
     required this.id,
-    required this.username,
-    required this.email,
     required this.firstName,
     required this.lastName,
+    required this.username,
+    required this.email,
     required this.phoneNumber,
     required this.profilePicture,
   });
@@ -63,5 +64,26 @@ class UserModel {
       'PhoneNumber': phoneNumber,
       'ProfilePicture': profilePicture,
     };
+  }
+
+  /// factory method to create a UserModel from a firebase document snapshot.
+  factory UserModel.fromSnapshot(
+    DocumentSnapshot<Map<String, dynamic>> document,
+  ) {
+    if (document.data() != null) {
+      final data = document.data();
+      if (data != null) {
+        return UserModel(
+          id: document.id,
+          firstName: data['FirstName'] ?? '',
+          lastName: data['LastName'] ?? '',
+          username: data['Username'] ?? '',
+          email: data['Email'] ?? '',
+          phoneNumber: data['PhoneNumber'] ?? '',
+          profilePicture: data['ProfilePicture'] ?? '',
+        );
+      }
+    }
+    return UserModel.empty();
   }
 }
