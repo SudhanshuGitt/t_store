@@ -58,7 +58,11 @@ class TFirebaseStorageService extends GetxController {
   Future<String> uploadImageFile(String path, XFile image) async {
     try {
       final ref = _firebaseStorage.ref(path).child(image.name);
+      if (!File(image.path).existsSync()) {
+        throw 'File not found';
+      }
       await ref.putFile(File(image.path));
+
       final url = await ref.getDownloadURL();
       return url;
     } catch (e) {

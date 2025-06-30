@@ -7,7 +7,7 @@ class BannerModel {
     required this.active,
   });
 
-  final String imageUrl;
+  String imageUrl;
   final String targetScreen;
   final bool active;
 
