@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 
@@ -47,12 +48,15 @@ class TRoundedImage extends StatelessWidget {
           borderRadius: applyImageRadius
               ? BorderRadius.circular(borderRadius)
               : BorderRadius.zero,
-          child: Image(
-            image: isNetworkImage
-                ? NetworkImage(imageUrl)
-                : AssetImage(imageUrl),
-            fit: fit,
-          ),
+          child: isNetworkImage
+              // it will download the image for the first time and going to reuse that image again and again
+              // we dont want to reload the images again and again from the firebase so use
+              ? CachedNetworkImage(
+                  imageUrl: imageUrl,
+                  fit: fit,
+                  errorWidget: (context, url, error) => const Icon(Icons.error),
+                )
+              : Image(fit: fit, image: AssetImage(imageUrl)),
         ),
       ),
     );
