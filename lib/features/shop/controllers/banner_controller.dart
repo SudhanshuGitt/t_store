@@ -1,7 +1,6 @@
 import 'package:get/get.dart';
 import 'package:t_store/data/repositories/banners/banner_repository.dart';
 import 'package:t_store/features/shop/models/banner_model.dart';
-import 'package:t_store/utils/dummydata/TDummyData.dart';
 import 'package:t_store/utils/popups/loaders.dart';
 
 class BannerController extends RxController {
