@@ -7,6 +7,7 @@ import 'package:t_store/common/widgets/custom_shapes/containers/search_container
 import 'package:t_store/common/widgets/layout/grid_layout.dart';
 import 'package:t_store/common/widgets/products/cart/cart_menu_icon.dart';
 import 'package:t_store/common/widgets/texts/section_heading.dart';
+import 'package:t_store/features/shop/controllers/category_controller.dart';
 import 'package:t_store/features/shop/screens/brands/all_brands.dart';
 import 'package:t_store/features/shop/screens/store/widgets/category_tab.dart';
 import 'package:t_store/utils/constants/colors.dart';
@@ -19,11 +20,12 @@ class StoreScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isDarkMode = THelperFunctions.isDarkMode(context);
+    final categories = CategoryController.instance.featuredCategories;
 
     // we need to add DefaultTabController bcz we have used tabBar at bottom property
     return DefaultTabController(
       // no of tab bars we needed
-      length: 5,
+      length: categories.length,
       child: Scaffold(
         appBar: TAppBar(
           title: Text(
@@ -89,25 +91,17 @@ class StoreScreen extends StatelessWidget {
                 /// Tabs
                 // to create tabs that are going to be fixed when we scroll at the top
                 bottom: TTabBar(
-                  tabs: [
-                    Tab(child: const Text('Sports')),
-                    Tab(child: const Text('Furniture')),
-                    Tab(child: const Text('Electronics')),
-                    Tab(child: const Text('Clothes')),
-                    Tab(child: const Text('Cosmetics')),
-                  ],
+                  tabs: categories
+                      .map((category) => Tab(child: Text(category.name)))
+                      .toList(),
                 ),
               ),
             ];
           },
           body: TabBarView(
-            children: [
-              TCategoryTab(),
-              TCategoryTab(),
-              TCategoryTab(),
-              TCategoryTab(),
-              TCategoryTab(),
-            ],
+            children: categories
+                .map((category) => TCategoryTab(category: category))
+                .toList(),
           ),
         ),
       ),

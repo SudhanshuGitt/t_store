@@ -71,18 +71,17 @@ class UserModel {
     DocumentSnapshot<Map<String, dynamic>> document,
   ) {
     if (document.data() != null) {
-      final data = document.data();
-      if (data != null) {
-        return UserModel(
-          id: document.id,
-          firstName: data['FirstName'] ?? '',
-          lastName: data['LastName'] ?? '',
-          username: data['Username'] ?? '',
-          email: data['Email'] ?? '',
-          phoneNumber: data['PhoneNumber'] ?? '',
-          profilePicture: data['ProfilePicture'] ?? '',
-        );
-      }
+      final data = document.data()!;
+
+      return UserModel(
+        id: document.id,
+        firstName: data['FirstName'] ?? '',
+        lastName: data['LastName'] ?? '',
+        username: data['Username'] ?? '',
+        email: data['Email'] ?? '',
+        phoneNumber: data['PhoneNumber'] ?? '',
+        profilePicture: data['ProfilePicture'] ?? '',
+      );
     }
     return UserModel.empty();
   }
